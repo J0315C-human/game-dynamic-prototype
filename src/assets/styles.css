@@ -1,0 +1,85 @@
+body {
+  background-color: #CCC;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#canvas {
+  width: 100%;
+  height: 100vh;
+}
+
+div, h1, h2, h3 {
+  padding: .3rem;
+  margin: .2rem;
+  box-sizing: border-box;
+}
+
+#main {
+  display: block;
+}
+
+.section {
+  font-size: 1rem;
+  border: 2px solid #333;
+  background-color: #FFF;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  width: 100%;
+  background-color: #eee;
+}
+
+.entity {
+  background-color: #eee;
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 10rem;
+}
+.entity {
+  border: 1px slid #555;
+}
+
+.entity > h3 {
+  font-size: 1rem;
+  width: 100%;
+}
+
+.entity > div {
+  font-size: .8rem;
+  width: 100%;
+  padding: 0;
+}
+
+.entity > button {
+  background-color: rgb(197, 215, 255);
+  margin: .1rem;
+}
+.entity > button:hover {
+  cursor: pointer;
+  background-color: rgb(223, 236, 255);
+}
+
+.entity > button:disabled {
+  cursor: default;
+  background-color: rgb(201, 201, 201);
+  opacity: .7;
+}
+
+.selectable {
+  background-color: rgb(247, 205, 255);
+}
+
+.selectable:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.button:focus {
+  outline: none;
+}
