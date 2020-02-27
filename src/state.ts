@@ -30,7 +30,6 @@ class State {
   };
 
   updateCurrentAction = () => {
-    console.log(this.curCreatureFocusedId, this.curActionType);
     if (this.curCreatureFocusedId && this.curActionType) {
       this.processCreatureAction(this.curActionType, this.curCreatureFocusedId);
     }
@@ -192,7 +191,7 @@ class State {
     const newCreature = getCreatureInitialByType(nextCreatureType, this.processCreatureAction);
 
     const reproductionCost = config.creatureEnergyCosts[creatureA.type].reproduce;
-    newCreature.energy = creatureA.energy + creatureB.energy - 2 * reproductionCost;
+    newCreature.energy = creatureA.energy + creatureB.energy - reproductionCost;
     newCreature.hat = creatureA.hat;
     const newCreatures = [] as Creature[];
     this.creatures.forEach(c => {
